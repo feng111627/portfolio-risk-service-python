@@ -9,3 +9,12 @@ dependencies = [
 [[tool.uv.index]]
 url = "https://mirrors.aliyun.com/pypi/simple/"
 default = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+# 默认详细输出：日志中可看到每个业务场景（测试类）下的用例与结果
+addopts = "-v"
